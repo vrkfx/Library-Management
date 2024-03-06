@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Library_Management
@@ -11,7 +12,9 @@ namespace Library_Management
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World");
-            Console.ReadLine();
+
+            //Keeping console open for longer
+            Thread.Sleep(3000);
         }
     }
 }
