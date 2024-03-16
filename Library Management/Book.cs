@@ -21,7 +21,7 @@ namespace Library_Management
 
         public void AbouBook()
         {
-            Console.WriteLine($" Book Title: {Title} \n Author: {Author} \n ISBN: {ISBN} \n Genre: {Genre}");
+            Console.WriteLine($" Book Title: {Title} \n Author: {Author} \n ISBN: {ISBN} \n");
         }
 
         public void GetAllBooksByName() 
