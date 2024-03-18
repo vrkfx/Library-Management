@@ -8,11 +8,11 @@ namespace Library_Management
 {
     internal class Book
     {
-        public String Title { get; set; }
-        public String Author { get; set; }
-        public String ISBN { get; set; }
+        public string Title { get; set; }
+        public string Author { get; set; }
+        public string ISBN { get; set; }
 
-        public Book(String title, String author, String isbn) 
+        public Book(string title, string author, string isbn) 
         {
             this.Title = title;
             this.Author = author;
@@ -27,6 +27,10 @@ namespace Library_Management
         public void GetAllBooksByName() 
         {
             Console.WriteLine($" Book Title: {Title}");
+        }
+
+        public bool BorrowBook() {
+            return true;
         }
     }
 }
