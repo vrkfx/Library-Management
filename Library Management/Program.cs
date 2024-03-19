@@ -48,7 +48,14 @@ namespace Library_Management
             library.DisplayAll();
             Console.WriteLine("-------------------------------------------------------------------------------------");
             Console.WriteLine("This Library has " + library.totalNumberOfBooks() + " books");
-           
+
+
+            //Create User 
+            User user1 = new User("Virroshan");
+            user1.BorrowBook(book3);
+            user1.DisplayBorrowedBooks();
+            library.DisplayAll();
+
             //search for Book
             Console.WriteLine("Enter the title of the book you want to search for:");
             string titleTosearch = Console.ReadLine();
@@ -66,6 +73,8 @@ namespace Library_Management
                 // Book not found
                 Console.WriteLine("Book not found!");
             }
+
+          
 
             
 

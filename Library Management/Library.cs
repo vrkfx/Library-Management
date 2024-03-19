@@ -51,7 +51,7 @@ namespace Library_Management
             return results;
         }
 
-        public int totalNumberOfBooks() 
+        public int TotalNumberOfBooks() 
         {
             return books.Count;
         }

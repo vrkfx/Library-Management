@@ -11,6 +11,7 @@ namespace Library_Management
         public string Title { get; set; }
         public string Author { get; set; }
         public string ISBN { get; set; }
+        public bool IsBorrowed { get; set; }
 
         public Book(string title, string author, string isbn) 
         {
@@ -30,7 +31,17 @@ namespace Library_Management
         }
 
         public bool BorrowBook() {
-            return true;
+           
+                if (!IsBorrowed)
+                {
+                    IsBorrowed = true;
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            
         }
     }
 }
