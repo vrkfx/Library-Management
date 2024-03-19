@@ -26,7 +26,7 @@ namespace Library_Management
 
             // Library
             Library library = new Library();
-            Console.WriteLine("This Library has " + library.totalNumberOfBooks() + " books");
+            Console.WriteLine("This Library has " + library.TotalNumberOfBooks() + " books");
             Console.WriteLine("-------------------------------------------------------------------------------------");
             Console.WriteLine("Adding one book the library");
             library.AddBook(book1);
@@ -47,13 +47,14 @@ namespace Library_Management
             Console.WriteLine("Books in the Library");
             library.DisplayAll();
             Console.WriteLine("-------------------------------------------------------------------------------------");
-            Console.WriteLine("This Library has " + library.totalNumberOfBooks() + " books");
+            Console.WriteLine("This Library has " + library.TotalNumberOfBooks() + " books");
 
 
             //Create User 
             User user1 = new User("Virroshan");
             user1.BorrowBook(book3);
             user1.DisplayBorrowedBooks();
+
             library.DisplayAll();
 
             //search for Book

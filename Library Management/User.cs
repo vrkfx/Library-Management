@@ -11,6 +11,7 @@ namespace Library_Management
         public string Name { get; set; }
         public int ID { get; set; }
         public List<Book> borrowedBooks;
+        public List<Library> booksInLibrary;
 
         public User(string name)
         {
