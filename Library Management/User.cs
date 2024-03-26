@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Library_Management
@@ -11,7 +12,7 @@ namespace Library_Management
         public string Name { get; set; }
         public int ID { get; set; }
         public List<Book> borrowedBooks;
-        public List<Library> booksInLibrary;
+    //    public List<Library> booksInLibrary;
 
         public User(string name)
         {
@@ -19,6 +20,14 @@ namespace Library_Management
             borrowedBooks = new List<Book>();
         }
 
+        public void GetAllUserName(List<User> users)
+        {
+
+            foreach (User user in users)
+            {
+                Console.WriteLine(user.Name);
+            }
+        }
 
         public bool BorrowBook(Book book)
         {
@@ -44,7 +53,17 @@ namespace Library_Management
 
         public bool ReturnBook(Book book)
         {
-            return true;
+            if (borrowedBooks.Contains(book))
+            {
+                book.ReturnBook();
+                borrowedBooks.Remove(book);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
     }
 }
